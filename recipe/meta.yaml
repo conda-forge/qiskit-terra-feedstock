@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/Qiskit/qiskit-terra/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 67ac498b951dcfa1a1a6343b6386ed555b075d91c28bc76b761d30357a8ba0a9
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qiskit-terra-{{ version }}.tar.gz
+  sha256: f53ced664055d10f3fbc2ceca0cf3af49ed475c91825b8409cd5b37bece8be50
 
 build:
   number: 0
