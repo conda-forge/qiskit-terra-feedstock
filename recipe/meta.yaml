@@ -1,5 +1,5 @@
 {% set name = "qiskit-terra" %}
-{% set version = "0.19.2" %}
+{% set version = "0.20.0" %}
 
 
 package:
@@ -8,22 +8,24 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qiskit-terra-{{ version }}.tar.gz
-  sha256: 01eb6040c7eefa5c16426d9ad37108581849b2832967f31ec303030c579835ea
+  sha256: f53ced664055d10f3fbc2ceca0cf3af49ed475c91825b8409cd5b37bece8be50
 
 build:
   number: 0
   skip: true  # [win]
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler('rust') }}
+    - cargo-bundle-licenses
   host:
-    - cython >=0.27.1
     - pip
     - python
     - setuptools
+    - setuptools-rust
     - wheel
   run:
     - dill >=0.3
@@ -33,10 +35,10 @@ requirements:
     - python
     - python-constraint >=1.4
     - python-dateutil >=2.8.0
-    - retworkx >=0.10.1
+    - retworkx >=0.11.0
     - scipy >=1.5
     - stevedore >=3.0.0
-    - python-symengine >=0.8
+    - python-symengine >=0.9
     - sympy >=1.3
     - tweedledum >=1.1,<2.0
   run_constrained:
@@ -62,7 +64,9 @@ about:
   home: https://github.com/Qiskit/qiskit-terra
   summary: Software for developing quantum computing programs
   license: Apache-2.0
-  license_file: LICENSE.txt
+  license_file:
+    - THIRDPARTY.yml
+    - LICENSE.txt
 
 extra:
   recipe-maintainers:
