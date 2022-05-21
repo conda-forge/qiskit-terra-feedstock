@@ -1,5 +1,5 @@
 {% set name = "qiskit-terra" %}
-{% set version = "0.20.1" %}
+{% set version = "0.20.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qiskit-terra-{{ version }}.tar.gz
-  sha256: 023536e2c4bb9dd80b162419c63c5ce527d903733fd25b2f12d4397e5ef20b1c
+  sha256: e38a932b389108fae87788af308748f64ecbc63a6f3b68849ff91ebd6cb2c09d
 
 build:
   number: 0
