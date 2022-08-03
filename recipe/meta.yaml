@@ -40,8 +40,8 @@ requirements:
     - stevedore >=3.0.0
     - python-symengine >=0.9
     - sympy >=1.3
-    - tweedledum >=1.1,<2.0  # [py==37]
-    - typing-extensions
+    - tweedledum >=1.1,<2.0
+    - typing-extensions  # [py==37]
   run_constrained:
     - matplotlib >=3.3
     - matplotlib-base >=3.3
