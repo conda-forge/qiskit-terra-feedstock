@@ -38,7 +38,7 @@ requirements:
     - dill >=0.3
     - python-dateutil >=2.8.0
     - stevedore >=3.0.0
-    - symengine >=0.9
+    - python-symengine >=0.9
     - shared-memory38  # [py==37]
     - typing-extensions  # [py==37]
     - tweedledum >=1.1,<2.0
