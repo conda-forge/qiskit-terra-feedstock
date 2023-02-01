@@ -1,5 +1,5 @@
 {% set name = "qiskit-terra" %}
-{% set version = "0.23.0" %}
+{% set version = "0.23.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qiskit-terra-{{ version }}.tar.gz
-  sha256: 415dfe93619006fbcc45a5aff1c2f05b508139a7b53dad7c709c0401a58c525f
+  sha256: 71dfb4510b2f1fdb7589b412e8304d928534fa2eece66a65b3f841baf5412afb
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
