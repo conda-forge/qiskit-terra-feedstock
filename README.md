@@ -1,11 +1,11 @@
-About qiskit-terra
-==================
+About qiskit-terra-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qiskit-terra-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Qiskit/qiskit-terra
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qiskit-terra-feedstock/blob/main/LICENSE.txt)
 
 Summary: Software for developing quantum computing programs
 
