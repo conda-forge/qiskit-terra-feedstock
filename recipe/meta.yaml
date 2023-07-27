@@ -1,5 +1,5 @@
 {% set name = "qiskit-terra" %}
-{% set version = "0.24.2" %}
+{% set version = "0.25.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qiskit-terra-{{ version }}.tar.gz
-  sha256: e9fa641aff7f40cd637d5a284d4a6d712198395ed770c61f55edf85804ce1d1c
+  sha256: 4775b0ae0beb59877b091782a9799e958c00a7f9517720cad0b950b5dea63c1f
 
 build:
   number: 0
@@ -30,8 +30,9 @@ requirements:
     - setuptools-rust
     - wheel
   run:
+    - typing-extensions
     - importlib-metadata <5.0  # [py<39]
-    - rustworkx >=0.12.0
+    - rustworkx >=0.13.0
     - python
     - numpy >=1.17
     - ply >=3.10
