@@ -106,6 +106,12 @@ outputs:
       license_file:
         - qiskit/LICENSE.txt
 
+about:
+  home: https://github.com/Qiskit/qiskit
+  summary: Software for developing quantum computing programs
+  license: Apache-2.0
+
+
 extra:
   recipe-maintainers:
     - BastianZim
