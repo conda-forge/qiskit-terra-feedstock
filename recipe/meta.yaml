@@ -15,9 +15,7 @@ build:
 
 outputs:
   - name: qiskit-terra
-    script:
-      - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
-      - {{ PYTHON }} -m pip install . -vv
+    script: build_terra.sh
     build:
       skip: true  # [win]
     requirements:
@@ -67,8 +65,8 @@ outputs:
         - pip
 
   - name: qiskit
-    script:
-      - {{ PYTHON }} -m pip install qiskit_pkg -vv
+    version: 0.44.1
+    script: build_qiskit.sh
     build:
       number: 0
     requirements:
