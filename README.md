@@ -3,7 +3,20 @@ About qiskit-terra-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qiskit-terra-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/Qiskit/qiskit-terra
+
+About qiskit-terra
+------------------
+
+Home: https://github.com/Qiskit/qiskit
+
+Package license: Apache-2.0
+
+Summary: Software for developing quantum computing programs
+
+About qiskit
+------------
+
+Home: https://github.com/Qiskit/qiskit
 
 Package license: Apache-2.0
 
@@ -138,6 +151,13 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/qiskit-terra-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_python3.9.____cpython" alt="variant">
                 </a>
               </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15748&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/qiskit-terra-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -151,6 +171,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-qiskit-green.svg)](https://anaconda.org/conda-forge/qiskit) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/qiskit.svg)](https://anaconda.org/conda-forge/qiskit) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/qiskit.svg)](https://anaconda.org/conda-forge/qiskit) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/qiskit.svg)](https://anaconda.org/conda-forge/qiskit) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-qiskit--terra-green.svg)](https://anaconda.org/conda-forge/qiskit-terra) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/qiskit-terra.svg)](https://anaconda.org/conda-forge/qiskit-terra) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/qiskit-terra.svg)](https://anaconda.org/conda-forge/qiskit-terra) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/qiskit-terra.svg)](https://anaconda.org/conda-forge/qiskit-terra) |
 
 Installing qiskit-terra
@@ -163,41 +184,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `qiskit-terra` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `qiskit, qiskit-terra` can be installed with `conda`:
 
 ```
-conda install qiskit-terra
-```
-
-or with `mamba`:
-
-```
-mamba install qiskit-terra
-```
-
-It is possible to list all of the versions of `qiskit-terra` available on your platform with `conda`:
-
-```
-conda search qiskit-terra --channel conda-forge
+conda install qiskit qiskit-terra
 ```
 
 or with `mamba`:
 
 ```
-mamba search qiskit-terra --channel conda-forge
+mamba install qiskit qiskit-terra
+```
+
+It is possible to list all of the versions of `qiskit` available on your platform with `conda`:
+
+```
+conda search qiskit --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search qiskit --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search qiskit-terra --channel conda-forge
+mamba repoquery search qiskit --channel conda-forge
 
-# List packages depending on `qiskit-terra`:
-mamba repoquery whoneeds qiskit-terra --channel conda-forge
+# List packages depending on `qiskit`:
+mamba repoquery whoneeds qiskit --channel conda-forge
 
-# List dependencies of `qiskit-terra`:
-mamba repoquery depends qiskit-terra --channel conda-forge
+# List dependencies of `qiskit`:
+mamba repoquery depends qiskit --channel conda-forge
 ```
 
 
