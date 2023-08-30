@@ -20,7 +20,6 @@ build:
 
 outputs:
   - name: qiskit-terra
-    script: build_terra.sh
     build:
       script:
         # cargo-bundle-licenses must be run in directory with Cargo.toml
