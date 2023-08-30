@@ -28,6 +28,7 @@ outputs:
         - {{ compiler('rust') }}
         - cargo-bundle-licenses
       host:
+        - tomli  # Temporary workaround to missing setuptools-rust dependency
         - pip
         - python
         - setuptools
