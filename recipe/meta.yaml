@@ -12,7 +12,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv
@@ -58,15 +57,16 @@ requirements:
 test:
   imports:
     - qiskit
-    - qiskit.algorithms
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://github.com/Qiskit/qiskit-terra
+  home: https://qiskit.org/
   summary: Software for developing quantum computing programs
+  doc_url: https://qiskit.org/documentation/index.html
+  dev_url: https://github.com/Qiskit/qiskit
   license: Apache-2.0
   license_file:
     - THIRDPARTY.yml
