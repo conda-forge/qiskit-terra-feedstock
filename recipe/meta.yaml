@@ -3,7 +3,7 @@
 
 
 package:
-  name: {{ name|lower }}
+  name: qiskit-terra-split
   version: {{ version }}
 
 source:
