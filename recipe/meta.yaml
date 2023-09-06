@@ -83,6 +83,7 @@ outputs:
   - name: qiskit
     version: 0.44.1
     build:
+      noarch: python
       number: 0
       script: python -m pip install ./qiskit -vv --no-deps --no-index --no-build-isolation --ignore-installed --cache-dir pip_cache
     requirements:
@@ -90,6 +91,7 @@ outputs:
         - pip
         - python
       run:
+        - python
         - {{ pin_subpackage('qiskit-terra', max_pin="x.x.x") }}
     test:
       imports:
