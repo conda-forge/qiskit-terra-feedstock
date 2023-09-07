@@ -87,6 +87,9 @@ outputs:
       number: 0
       script: python -m pip install ./qiskit -vv --no-deps --no-index --no-build-isolation --ignore-installed --cache-dir pip_cache
     requirements:
+      build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
         - pip
         - python
