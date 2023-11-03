@@ -29,11 +29,10 @@ requirements:
     - setuptools-rust
     - wheel
   run:
-    - typing-extensions
-    - importlib-metadata <5.0  # [py<39]
+    - typing-extensions  # [py<311]
     - rustworkx >=0.13.0
     - python
-    - numpy >=1.17
+    - numpy >=1.17,<2.0
     - ply >=3.10
     - psutil >=5
     - scipy >=1.5
@@ -51,8 +50,6 @@ requirements:
     - seaborn >=0.9.0
     - pygments >=2.4
     - z3-solver >=4.7
-    - qiskit-toqm >=0.1.0
-    - qiskit-qasm3-import >=0.1.0
 
 test:
   imports:
