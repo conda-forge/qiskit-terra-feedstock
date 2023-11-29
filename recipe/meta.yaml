@@ -1,5 +1,5 @@
 {% set name = "qiskit-terra" %}
-{% set version = "0.45.0" %}
+{% set version = "0.45.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qiskit-terra-{{ version }}.tar.gz
-  sha256: fe58d2fb123395853b426e7bd3747cdba4152573c7c3be1f19b5cd20bef92664
+  sha256: 4ed0cf0d5f275276a27135b9d02f599d0c59c0c1c4286c2392314558481ed736
 
 build:
   number: 0
@@ -32,7 +32,7 @@ requirements:
     - typing-extensions  # [py<311]
     - rustworkx >=0.13.0
     - python
-    - numpy >=1.17,<2.0
+    - numpy >=1.17,<2
     - ply >=3.10
     - psutil >=5
     - scipy >=1.5
@@ -40,7 +40,7 @@ requirements:
     - dill >=0.3
     - python-dateutil >=2.8.0
     - stevedore >=3.0.0
-    - python-symengine >=0.9,<0.10
+    - python-symengine >=0.9,!=0.10.0
   run_constrained:
     - matplotlib >=3.3
     - matplotlib-base >=3.3
