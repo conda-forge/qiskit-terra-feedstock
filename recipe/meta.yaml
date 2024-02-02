@@ -15,23 +15,30 @@ build:
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv
+  ignore_run_exports_from:  # [python_impl != "pypy"]
+    - python  # [python_impl != "pypy"]
+  string: pyabi3_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [python_impl != "pypy"]
+  skip: true  # [py != 38 and python_impl != "pypy"]
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
+    - python =3.8                            # [build_platform != target_platform and python_impl != "pypy"]
+    - python                                 # [build_platform != target_platform and python_impl == "pypy"]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
   host:
     - pip
+    - python =3.8  # [python_impl != "pypy"]
     - python
     - setuptools
     - setuptools-rust
     - wheel
   run:
-    - typing-extensions  # [py<311]
+    - typing-extensions
     - rustworkx >=0.13.0
-    - python
+    - python  # [python_impl == "pypy"]
+    - python >=3.8
     - numpy >=1.17,<2
     - ply >=3.10
     - psutil >=5
@@ -52,11 +59,13 @@ requirements:
     - z3-solver >=4.7
 
 test:
-  imports:
-    - qiskit
+  # Fails for 0.46 without qiskit package
+  # imports:
+  #   - qiskit
   commands:
     - pip check
   requires:
+    - abi3audit
     - pip
 
 about:
