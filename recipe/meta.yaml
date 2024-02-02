@@ -1,5 +1,5 @@
 {% set name = "qiskit-terra" %}
-{% set version = "0.45.3" %}
+{% set version = "0.46.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qiskit-terra-{{ version }}.tar.gz
-  sha256: fa3c5d9f54abd5f38fa79c1b1490ff984358377a2d6ed3c17ad2f06fd94243f8
+  sha256: 49ba03cfe49b38b81a9e3144637bf036a82d38f97333f3871dee7b72a5f1f094
 
 build:
   number: 0
@@ -40,7 +40,7 @@ requirements:
     - dill >=0.3
     - python-dateutil >=2.8.0
     - stevedore >=3.0.0
-    - python-symengine >=0.9,!=0.10.0
+    - python-symengine >=0.11
   run_constrained:
     - matplotlib >=3.3
     - matplotlib-base >=3.3
